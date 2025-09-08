@@ -1,7 +1,7 @@
-import { Server, ServerOptions } from "socket.io";
+import { Server } from "socket.io";
 import { Server as HttpServer } from "http";
 
-export function initSocket(httpServer: any) {
+export function initSocket(httpServer: HttpServer) {
   const io = new Server(httpServer);
 
   io.on("connection", (socket) => {
