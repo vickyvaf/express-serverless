@@ -1,7 +1,8 @@
-import { NowRequest, NowResponse } from '@vercel/node';
-import express from 'express';
-import { connectDB } from '../src/config/database';
-import { setRoutes } from '../src/routes/index';
+// If you are using pnpm, make sure to install the types with:
+// pnpm add -D @types/vercel__node
+
+import { NowRequest, NowResponse } from "@vercel/node";
+import express from "express";
 
 const app = express();
 
@@ -9,10 +10,10 @@ const app = express();
 app.use(express.json());
 
 // Connect to the database
-connectDB();
+// connectDB();
 
 // Set up routes
-setRoutes(app);
+// setRoutes(app);
 
 export default (req: NowRequest, res: NowResponse) => {
   app(req, res);

@@ -10,6 +10,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+    "@vercel/node": "^5.3.21",
     "express": "^4.17.1",
     "pg": "^8.7.1",
     "sequelize": "^6.37.7",
