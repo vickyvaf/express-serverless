@@ -1,0 +1,30 @@
+{
+  "name": "express-serverless-app",
+  "version": "1.0.0",
+  "description": "A simple Express app using TypeScript, PostgreSQL, and Socket.IO, deployed as a serverless function on Vercel.",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.37.7",
+    "socket.io": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/pg": "^8.15.5",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=14.x"
+  },
+  "license": "MIT"
+}
